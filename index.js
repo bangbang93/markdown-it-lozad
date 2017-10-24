@@ -6,18 +6,20 @@ module.exports = function (markdownIt, className = 'lozad') {
   const defaultImgRender = markdownIt.renderer.rules.image
   markdownIt.renderer.rules.image = function (tokens, idx, options, env, renderer) {
     const token = tokens[0]
-    for(var i in token.attrs) {
-      if (token.attrs[i][0] === 'src') {
-        token.attrs[i][0] = 'data-src'
+    for(const attr of token.attrs) {
+      if (attr[0] === 'src') {
+        attr[0] = 'data-src'
+        break
       }
     }
     let hasClass = false
-    for(var i in token.attrs) {
-      if (token.attrs[i][0] === 'class') {
-        const classes = token.attrs[i][1].split(' ')
+    for(const attr of token.attrs) {
+      if (attr[0] === 'class') {
+        const classes = attr[1].split(' ')
         classes.push(className)
-        token.attrs[i][1] = classes.join(' ')
+        attr[1] = classes.join(' ')
         hasClass = true
+        break
       }
     }
     if (!hasClass) {
