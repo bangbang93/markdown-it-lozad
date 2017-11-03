@@ -1,5 +1,7 @@
 ## markdown-it-lozad
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/bangbang93/markdown-it-lozad.svg)](https://greenkeeper.io/)
+
 ## usage
 ```javascript
 const MarkdownIt = require('markdown-it')
