@@ -18,6 +18,7 @@ describe('markdown-it-lozad', function () {
     html.includes('data-src').should.true()
     html.includes('lozad').should.true()
     html.match(/data-src/ig).length.should.eql(2)
+    html.match(/src="data:image/ig).length.should.eql(2)
   })
   it('should use custom class', function () {
     const md = new MarkdownIt().use(MarkdownItLozad, 'some-custom-lozad')
