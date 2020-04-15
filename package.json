@@ -22,7 +22,7 @@
   "homepage": "https://github.com/bangbang93/markdown-it-lozad#readme",
   "devDependencies": {
     "markdown-it": "^8.4.0",
-    "mocha": "^4.0.1",
+    "mocha": "^7.1.1",
     "should": "^13.1.2"
   }
 }
